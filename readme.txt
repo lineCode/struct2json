@@ -23,4 +23,10 @@ namespace Test
 
 注意要用;结尾
 
+2.生成代码
 ./struct2json xxx.xxx
+
+3.编译需要rapidjson的支持
+
+
+example文件夹有例子
