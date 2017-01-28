@@ -1,6 +1,6 @@
 
 
-目前类型只支持  int/unsigned int/string/vector/自定义
+目前类型只支持  long/int/unsigned int/string/vector/自定义
 
 1.使用一种格式
 
