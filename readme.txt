@@ -26,7 +26,7 @@ namespace Test
 2.生成代码
 ./struct2json xxx.xxx
 
-3.编译需要rapidjson的支持
+3.编译需要rapidjson的支持，把rapidjson的include文件夹放在example目录下
 
 
 example文件夹有例子
