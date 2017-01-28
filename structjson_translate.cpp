@@ -417,11 +417,11 @@ int Module::GenerateCode(Context &ctx)
     cpp << "#include \"rapidjson/writer.h\"\n";
     cpp << "using namespace rapidjson;\n";
     cpp << "using namespace std;\n";
-    cpp << "static const int E_BUF_NOT_ENOUGH = -22220000;\n";
-    cpp << "static const int E_TYPE_NOT_MATCH = -22220001;\n";
-    cpp << "static const int E_MEMBER_NOT_FOUND = -22220002;\n";
-    cpp << "static const int E_PARSE_FAIL = -22220003;\n";
-    cpp << "static const int E_NOT_OBJECT = -22220004;\n";
+    header << "#define E_BUF_NOT_ENOUGH -22220000\n";
+    header << "#define E_TYPE_NOT_MATCH -22220001\n";
+    header << "#define E_MEMBER_NOT_FOUND -22220002\n";
+    header << "#define E_PARSE_FAIL -22220003\n";
+    header << "#define E_NOT_OBJECT -22220004\n";
     int ret = 0;
     ret = Module2Json(ctx);
     if (ret != 0)
