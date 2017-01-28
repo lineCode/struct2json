@@ -70,12 +70,12 @@ int translate(module_t *m)
     string headerfile = GetOutputFile(gargv[1], ".structjson.h");
     string cppfile = GetOutputFile(gargv[1], ".structjson.cpp");
     string inc;
-    inc = "#include \"" + GetBaseName(GetOutputFile(gargv[1], ".h")) + "\"\n";
+    //inc = "#include \"" + GetBaseName(GetOutputFile(gargv[1], ".h")) + "\"\n";
     if (ret == 0)
         ret = save(headerfile, inc + ctx.header.str());
 	if (ret == 0)
 		cout << "header:\t" << headerfile << endl;
-    inc = "#include \"" + GetBaseName(headerfile) + "\"\n";
+    //inc = "#include \"" + GetBaseName(headerfile) + "\"\n";
     //inc += "#include \"hydra_jce_endecode.h\"\n";
     if (ret == 0)
         ret = save(cppfile, inc + ctx.cpp.str());

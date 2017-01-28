@@ -3,14 +3,17 @@
 #include "structjson_bison.h"
 %}
 %option yylineno
+%option noyywrap
 %%
-"module"        { return MODULE; }
 "namespace"        { return MODULE; }
 "struct"        { return STRUCT; }
 "int"           { return INT; }
+"long"           { return LONG; }
 "unsigned"      { return UNSIGNED; }
 "string"        { return STRING; }
+"std::string"        { return STRING; }
 "vector"        { return VECTOR; }
+"std::vector"        { return VECTOR; }
 "optional"      { return OPTIONAL; }
 "require"       { return REQUIRE; }
 

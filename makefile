@@ -8,7 +8,8 @@ objs = structjson_bison.o structjson_flex.o structjson_lib.o translate.o structj
 
 
 struct2json: $(objs)
-	g++ -o $@ $^ -lfl
+	#g++ -o $@ $^ -lfl
+	g++ -o $@ $^
 
 
 structjson_flex.c: structjson.l
