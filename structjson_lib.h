@@ -13,6 +13,7 @@ extern "C" {
 
     enum {
         TYPE_INT = 1,
+        TYPE_INT64,
         TYPE_LONG,
         TYPE_LONG_LONG,
         TYPE_UINT,

@@ -18,6 +18,7 @@ int Member::Member2Json(Context &ctx)
         case TYPE_INT:
         case TYPE_LONG:
         case TYPE_LONG_LONG:
+        case TYPE_INT64:
         case TYPE_UINT:
             {
                 cpp << "value.AddMember(\"" << m_sName << "\", info." << m_sName << ", ator);\n";
@@ -53,6 +54,7 @@ int Member::Member2Json(Context &ctx)
                 switch (m_iVecType)
                 {
                     case TYPE_LONG:
+                    case TYPE_INT64:
                     case TYPE_LONG_LONG:
                         cpp << "v.SetUint64(*itr);\n";
                         break;
@@ -97,6 +99,7 @@ int Member::Json2Member(Context &ctx)
     {
         case TYPE_LONG_LONG:
         case TYPE_LONG:
+        case TYPE_INT64:
             cpp << "if (!mitr->value.IsInt64())\n";
             cpp << "    return E_TYPE_NOT_MATCH;\n";
             cpp << "info." << m_sName << " = mitr->value.GetInt64();\n";
@@ -130,6 +133,7 @@ int Member::Json2Member(Context &ctx)
                 switch (m_iVecType)
                 {
                     case TYPE_LONG:
+                    case TYPE_INT64:
                     case TYPE_LONG_LONG:
                         cpp << "if (!itr->IsInt64())\n";
                         cpp << "return E_TYPE_NOT_MATCH;\n";

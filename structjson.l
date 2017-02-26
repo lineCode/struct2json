@@ -8,6 +8,7 @@
 "namespace"        { return MODULE; }
 "struct"        { return STRUCT; }
 "int"           { return INT; }
+"int64_t"           { return INT64; }
 "long"           { return LONG; }
 "unsigned"      { return UNSIGNED; }
 "string"        { return STRING; }

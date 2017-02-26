@@ -16,6 +16,7 @@
 %token OPTIONAL
 %token REQUIRE
 %token INT
+%token INT64
 %token LONG
 %token UNSIGNED
 %token VECTOR
@@ -62,6 +63,7 @@ simpletype: INT {$$ = new_type(TYPE_INT, 0, new_symbol("int"));}
     | IDENTIFIER {$$ = new_type(TYPE_CUSTOM, 0, $1);}
     | LONG {$$ = new_type(TYPE_LONG, 0, new_symbol("long"));}
     | LONG LONG {$$ = new_type(TYPE_LONG_LONG, 0, new_symbol("long long"));}
+    | INT64 {$$ = new_type(TYPE_INT64, 0, new_symbol("int64_t"));}
     ;
 %%
 #if 0
